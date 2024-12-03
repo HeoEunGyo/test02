@@ -1,0 +1,148 @@
+/* 배경 */
+.background {
+  position: absolute;
+  bottom: 0;
+  left: 50;
+  height: auto;
+  width: auto;
+}
+
+/* 소품 */
+.bucket {
+  position: absolute;
+  bottom: 160px;
+  left: 1620px;
+  height: auto;
+  width: auto;
+}
+
+.chair {
+  position: absolute;
+  bottom: 30px;
+  left: 348px;
+  height: auto;
+  width: auto;
+}
+
+.door {
+  position: absolute;
+  top: -330px;
+  left: 1640px;
+  height: auto;
+  width: auto;
+}
+
+.mop {
+  position: absolute;
+  top: -140px;
+  left: 590px;
+  height: auto;
+  width: auto;
+}
+
+/* 가구 */
+
+.furniture01 {
+  position: absolute;
+  top: -310px;
+  left: 520px;
+  height: auto;
+  width: auto;
+}
+
+.furniture02 {
+  position: absolute;
+  top: -450px;
+  left: 770px;
+  height: auto;
+  width: auto;
+}
+
+.furniture03 {
+  position: absolute;
+  top: -530px;
+  left: 890px;
+  height: auto;
+  width: auto;
+}
+
+.furniture04 {
+  position: absolute;
+  top: -570px;
+  left: 1380px;
+  height: auto;
+  width: auto;
+}
+
+.furniture05 {
+  position: absolute;
+  top: -390px;
+  left: 1510px;
+  height: auto;
+  width: auto;
+}
+
+/* 사람 */
+.person01 {
+  position: absolute;
+  top: -190px;
+  left: 750px;
+  height: auto;
+  width: auto;
+}
+
+.person02 {
+  position: absolute;
+  top: -150px;
+  left: 1100px;
+  height: auto;
+  width: auto;
+}
+
+.person03 {
+  position: absolute;
+  top: -460px;
+  left: 1130px;
+  height: auto;
+  width: auto;
+}
+
+.person04 {
+  position: absolute;
+  top: -230px;
+  left: 1400px;
+  height: auto;
+  width: auto;
+}
+
+.day_mafia {
+  position: absolute;
+  top: -210px;
+  left: 590px;
+  height: auto;
+  width: auto;
+}
+
+/* .deadman {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+} */
+
+.text {
+  position: absolute;
+  top: -920px;
+  left: 120px;
+  height: auto;
+  width: auto;
+}
+
+.window {
+  position: absolute;
+  top: -500px;
+  left: 150;
+  height: auto;
+  width: auto;
+}
