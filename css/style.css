@@ -1,148 +1,761 @@
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 /* 배경 */
 .background {
   position: absolute;
-  bottom: 0;
-  left: 50;
-  height: auto;
-  width: auto;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
 }
 
-/* 소품 */
+/* 공통 hover 상태 스타일 */
+/* 공통 hover 상태 스타일 */
+/* 공통 hover 상태 스타일 */
+/* 공통 이미지 스타일 */
+.window,
+.deadman,
+.blood_footprint,
+.chair,
+.mop,
 .bucket {
   position: absolute;
-  bottom: 160px;
-  left: 1620px;
   height: auto;
   width: auto;
+  transition: all 0.2s ease-in-out;
+  transform-origin: center center;
+  z-index: 10;
+}
+
+/* hover 상태 - 확대 효과 */
+.window:hover,
+.deadman:hover,
+.blood_footprint:hover,
+.chair:hover,
+.mop:hover,
+.bucket:hover {
+  transform: scale(1.2);
+}
+
+/* 클릭된 상태 _clicked 이미지 스타일 */
+.window_clicked,
+.deadman_clicked,
+.blood_footprint_clicked,
+.chair_clicked,
+.mop_clicked,
+.bucket_clicked {
+  position: absolute;
+  height: auto;
+  width: auto;
+  z-index: 11;
+  display: none; /* 초기 숨김 상태 */
+}
+
+/* 개별 이미지 위치 지정 */
+.window {
+  top: 350px;
+  left: 100px;
+  z-index: 7;
+}
+.window_clicked {
+  top: 350px;
+  left: 100px;
+  z-index: 7;
 }
 
 .chair {
-  position: absolute;
-  bottom: 30px;
-  left: 348px;
-  height: auto;
-  width: auto;
+  bottom: 5px;
+  left: 280px;
+  z-index: 3;
+}
+.chair_clicked {
+  bottom: 5px;
+  left: 280px;
+  z-index: 3;
 }
 
-.door {
-  position: absolute;
-  top: -330px;
-  left: 1640px;
-  height: auto;
-  width: auto;
+.blood_footprint {
+  top: 750px;
+  left: 420px;
+  z-index: 7;
+}
+.blood_footprint_clicked {
+  top: 750px;
+  left: 420px;
+  z-index: 7;
+}
+
+.deadman {
+  top: 730px;
+  left: 950px;
+  z-index: 11;
+}
+.deadman_clicked {
+  top: 730px;
+  left: 950px;
+  z-index: 11;
 }
 
 .mop {
-  position: absolute;
-  top: -140px;
-  left: 590px;
-  height: auto;
-  width: auto;
+  top: 650px;
+  left: 700px;
+  z-index: 2;
+}
+.mop_clicked {
+  top: 650px;
+  left: 700px;
+  z-index: 3;
 }
 
-/* 가구 */
-
-.furniture01 {
-  position: absolute;
-  top: -310px;
-  left: 520px;
-  height: auto;
-  width: auto;
+.bucket {
+  bottom: 100px;
+  left: 1640px;
+  z-index: 2;
+}
+.bucket_clicked {
+  bottom: 100px;
+  left: 1640px;
+  z-index: 3;
 }
 
-.furniture02 {
-  position: absolute;
-  top: -450px;
-  left: 770px;
-  height: auto;
-  width: auto;
+/* 초기 상태 - 숨김 */
+.hidden {
+  display: none;
 }
 
-.furniture03 {
+/* 부드러운 등장 효과 */
+.fade-in {
+  display: block;
   position: absolute;
-  top: -530px;
-  left: 890px;
-  height: auto;
-  width: auto;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
-.furniture04 {
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 소품 */
+/* 소품 */
+/* 소품 */
+
+.door {
   position: absolute;
-  top: -570px;
-  left: 1380px;
+  top: 475px;
+  left: 1650px;
   height: auto;
   width: auto;
+  z-index: 4;
+}
+
+.door_clicked {
+  position: absolute;
+  top: 475px;
+  left: 1650px;
+  height: auto;
+  width: auto;
+  z-index: 4;
+  display: none; /* 초기 상태: 숨김 */
+}
+
+.AirConditioner {
+  position: absolute;
+  top: 25px;
+  left: 700px;
+  height: auto;
+  width: auto;
+  z-index: 6;
+}
+
+.carpet {
+  position: absolute;
+  top: 625px;
+  left: 800;
+  height: auto;
+  width: auto;
+  z-index: 7;
+}
+
+.lamp {
+  position: absolute;
+  top: 575px;
+  left: 427;
+  height: auto;
+  width: auto;
+  z-index: 11;
+}
+
+.lamp_clicked {
+  position: absolute;
+  top: 575px;
+  left: 400;
+  height: auto;
+  width: auto;
+  z-index: 11;
+}
+
+/* 책상(책, 열린책, 컴퓨터) */
+/* 책상(책, 열린책, 컴퓨터) */
+/* 책상(책, 열린책, 컴퓨터) */
+.desk {
+  position: absolute;
+  top: 520px;
+  left: 450;
+  height: auto;
+  width: auto;
+  z-index: 10;
+}
+
+.desk_book {
+  position: absolute;
+  top: 550px;
+  left: 650px; /* px 추가 */
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+  z-index: 11;
+}
+
+/* 마우스 호버 시 크기 증가 */
+.desk_book:hover {
+  transform: scale(1.2);
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.desk_book:active {
+  transform: scale(1.2) translateY(-50px); /* 크기 유지 + 위로 이동 */
+}
+
+.desk_computer {
+  position: absolute;
+  top: 480px;
+  left: 550px; /* px 추가 */
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+  z-index: 10;
+}
+
+/* 클릭 상태 이미지 */
+.desk_computer_clicked {
+  position: absolute;
+  top: 480px;
+  left: 550px;
+  height: auto;
+  width: auto;
+  z-index: 11;
+  display: none;
+}
+
+/* 클릭 시 원래 컴퓨터 이미지 숨기고 클릭된 이미지 표시 */
+.desk_computer:active {
+  visibility: hidden;
+}
+
+.desk_computer:active + .desk_computer_clicked {
+  display: block;
+}
+
+.desk_open_book {
+  position: absolute;
+  top: 630px;
+  left: 520px; /* px 추가 수정 */
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+  z-index: 11;
+}
+
+/* 마우스 호버 시 크기 증가 */
+.desk_open_book:hover {
+  transform: scale(1.2);
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.desk_open_book:active {
+  transform: scale(1.2) translateY(-50px); /* 크기 유지 + 위로 이동 */
+}
+
+/* 서랍장(책) */
+/* 서랍장(책) */
+/* 서랍장(책) */
+.drawer01 {
+  position: absolute;
+  top: 400px;
+  left: 700;
+  height: auto;
+  width: auto;
+  z-index: 9;
+}
+
+.drawer01_book {
+  position: absolute;
+  top: 405px;
+  left: 730px; /* px 추가 */
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+  z-index: 9;
+}
+
+/* 마우스 호버 시 크기 증가 */
+.drawer01_book:hover {
+  transform: scale(1.2);
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.drawer01_book:active {
+  transform: scale(1.2) translateY(-50px); /* 크기 유지 + 위로 이동 */
+}
+
+/* 소파 */
+/* 소파 */
+/* 소파 */
+
+/* 공통 스타일: 부드러운 애니메이션 및 중심 기준 설정 */
+.sofa01,
+.sofa02,
+.sofa03,
+.sofa04 {
+  position: absolute;
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+}
+
+/* 개별 위치 지정 */
+.sofa01 {
+  top: 400px;
+  left: 825px;
+  z-index: 8;
+}
+
+.sofa02 {
+  top: 350px;
+  left: 950px;
+  z-index: 7;
+}
+
+.sofa03 {
+  top: 400px;
+  left: 1050px;
+  z-index: 7;
+}
+
+.sofa04 {
+  top: 460px;
+  left: 1155px;
+  z-index: 7;
+}
+
+/* 마우스 호버 시 크기 증가 */
+.sofa01:hover,
+.sofa02:hover,
+.sofa03:hover,
+.sofa04:hover {
+  transform: scale(1.2);
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.sofa01:active,
+.sofa02:active,
+.sofa03:active,
+.sofa04:active {
+  transform: scale(1.2) translateY(-50px); /* 크기 유지 + 위로 이동 */
+}
+
+/* 흰 선반(책, 식물) */
+/* 흰 선반(책, 식물) */
+/* 흰 선반(책, 식물) */
+.shelf {
+  position: absolute;
+  top: 250px;
+  left: 1100;
+  height: auto;
+  width: auto;
+  z-index: 8;
+}
+/* 공통 스타일: 부드러운 애니메이션 및 중심 기준 설정 */
+.shelf_book01,
+.shelf_book02,
+.shelf_book03,
+.shelf_plant {
+  position: absolute;
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+}
+
+/* 개별 위치 지정 */
+.shelf_book01 {
+  top: 220px;
+  left: 1120px;
+  z-index: 8;
+}
+
+.shelf_book02 {
+  top: 226px;
+  left: 1130px;
+  z-index: 8;
+}
+
+.shelf_book03 {
+  top: 234px;
+  left: 1142px;
+  z-index: 8;
+}
+
+.shelf_plant {
+  top: 240px;
+  left: 1160px;
+  z-index: 8;
+}
+
+/* 마우스 hover 시 크기 증가 */
+.shelf_book01:hover,
+.shelf_book02:hover,
+.shelf_book03:hover,
+.shelf_plant:hover {
+  transform: scale(1.2);
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.shelf_book01:active,
+.shelf_book02:active,
+.shelf_book03:active,
+.shelf_plant:active {
+  transform: scale(1.2) translateY(-30px); /* 크기 유지 + 위로 이동 */
+}
+
+.clock {
+  position: absolute;
+  top: 300px;
+  left: 1275px;
+  height: auto;
+  width: auto;
+  z-index: 8;
+}
+
+/* 서랍장02(책 여러개) */
+/* 서랍장02(책 여러개) */
+/* 서랍장02(책 여러개) */
+.drawer02_frame01-1 {
+  position: absolute;
+  top: 530px;
+  left: 1370px;
+  height: auto;
+  width: auto;
+  z-index: 13;
+}
+.drawer02_frame01-2 {
+  position: absolute;
+  top: 397px;
+  left: 1475px;
+  height: auto;
+  width: auto;
+  z-index: 13;
+}
+.drawer02_frame01-3 {
+  position: absolute;
+  top: 300px;
+  left: 1370px;
+  height: auto;
+  width: auto;
+  z-index: 13;
+}
+.drawer02_frame01-4 {
+  position: absolute;
+  top: 335px;
+  left: 1370.5px;
+  height: 323;
+  width: auto;
+  z-index: 13;
+}
+.drawer02_frame01-5 {
+  position: absolute;
+  top: 362px;
+  left: 1479px;
+  height: auto;
+  width: auto;
+  z-index: 13;
+}
+
+.drawer02_book02-1 {
+  position: absolute;
+  top: 355px;
+  left: 1390px;
+  height: auto;
+  width: auto;
+  z-index: 12;
+}
+.drawer02_book02-2 {
+  position: absolute;
+  top: 362px;
+  left: 1400px;
+  height: auto;
+  width: auto;
+  z-index: 12;
+}
+.drawer02_book02-3 {
+  position: absolute;
+  top: 368px;
+  left: 1412px;
+  height: auto;
+  width: auto;
+  z-index: 12;
+}
+.drawer02_book02-4 {
+  position: absolute;
+  top: 376px;
+  left: 1424px;
+  height: auto;
+  width: auto;
+  z-index: 12;
+}
+.drawer02_book02-5 {
+  position: absolute;
+  top: 383px;
+  left: 1435px;
+  height: auto;
+  width: auto;
+  z-index: 12;
+}
+.drawer02_bookstand03 {
+  position: absolute;
+  top: 378px;
+  left: 1374px;
+  height: auto;
+  width: auto;
+  z-index: 11;
+}
+
+.drawer02_book04-1 {
+  position: absolute;
+  top: 430px;
+  left: 1390px;
+  height: auto;
+  width: auto;
+  z-index: 10;
+}
+.drawer02_book04-2 {
+  position: absolute;
+  top: 440px;
+  left: 1400px;
+  height: auto;
+  width: auto;
+  z-index: 10;
+}
+
+.drawer02_book04-3 {
+  position: absolute;
+  top: 450px;
+  left: 1414px;
+  height: auto;
+  width: auto;
+  z-index: 10;
+}
+.drawer02_bookstand05 {
+  position: absolute;
+  top: 456px;
+  left: 1373px;
+  height: auto;
+  width: auto;
+  z-index: 9;
+}
+.drawer02_wall06 {
+  position: absolute;
+  top: 343px;
+  left: 1375px;
+  height: auto;
+  width: auto;
+  z-index: 8;
 }
 
 .furniture05 {
   position: absolute;
-  top: -390px;
-  left: 1510px;
+  top: 475px;
+  left: 1500px;
   height: auto;
   width: auto;
+  z-index: 14;
+}
+
+/* 공통 스타일: 부드러운 애니메이션 및 중심 기준 설정 */
+.drawer02_book02-1,
+.drawer02_book02-2,
+.drawer02_book02-3,
+.drawer02_book02-4,
+.drawer02_book02-5,
+.drawer02_book04-1,
+.drawer02_book04-2,
+.drawer02_book04-3 {
+  position: absolute;
+  height: auto;
+  width: auto;
+  transition: all 0.2s ease-in-out; /* 부드러운 애니메이션 */
+  transform-origin: center center; /* 중심 기준 크기 조정 */
+}
+
+/* 마우스 hover 시 크기 증가 */
+.drawer02_book02-1:hover,
+.drawer02_book02-2:hover,
+.drawer02_book02-3:hover,
+.drawer02_book02-4:hover,
+.drawer02_book02-5:hover,
+.drawer02_book04-1:hover,
+.drawer02_book04-2:hover,
+.drawer02_book04-3:hover {
+  transform: scale(1.2); /* 크기 확대 */
+}
+
+/* 마우스를 꾹 눌렀을 때 위로 이동 */
+.drawer02_book02-1:active,
+.drawer02_book02-2:active,
+.drawer02_book02-3:active,
+.drawer02_book02-4:active,
+.drawer02_book02-5:active,
+.drawer02_book04-1:active,
+.drawer02_book04-2:active,
+.drawer02_book04-3:active {
+  transform: scale(1.2) translateY(-10px); /* 크기 유지 + 위로 이동 */
 }
 
 /* 사람 */
-.person01 {
+/* 사람 */
+/* 사람 */
+.person01,
+.person02,
+.person03,
+.person04 {
   position: absolute;
-  top: -190px;
-  left: 750px;
   height: auto;
   width: auto;
+  transition: transform 0.2s ease-in-out; /* 부드러운 확대 효과 */
+  transform-origin: center center; /* 중심 기준 */
+}
+
+/* 개별 위치 지정 */
+.person01 {
+  /* 청소아줌마 */
+  top: 650px;
+  left: 800px;
+  z-index: 10;
 }
 
 .person02 {
-  position: absolute;
-  top: -150px;
-  left: 1100px;
-  height: auto;
-  width: auto;
+  /* 시체도우미 */
+  top: 680px;
+  left: 980px;
+  z-index: 12;
 }
 
 .person03 {
-  position: absolute;
-  top: -460px;
-  left: 1130px;
-  height: auto;
-  width: auto;
+  /* 좌절하는 여자 */
+  top: 415px;
+  left: 1065px;
+  z-index: 10;
 }
 
 .person04 {
-  position: absolute;
-  top: -230px;
+  /* 경찰 */
+  top: 550px;
   left: 1400px;
-  height: auto;
-  width: auto;
+  z-index: 15;
+}
+
+/* 마우스 hover 시 크기 증가 */
+.person01:hover,
+.person02:hover,
+.person03:hover,
+.person04:hover {
+  transform: scale(1.2);
+}
+
+/* 클릭 시 진동 효과 */
+.shake {
+  animation: shake 1s ease-in-out 10; /* 진동 애니메이션 실행 */
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0); /* 원래 위치 */
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px); /* 왼쪽 이동 */
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px); /* 오른쪽 이동 */
+  }
 }
 
 .day_mafia {
   position: absolute;
-  top: -210px;
+  top: 640px;
   left: 590px;
   height: auto;
   width: auto;
+  z-index: 11;
+  transition: all 0.2s ease-in-out; /* 부드러운 확대 효과를 위한 트랜지션 추가 */
+  transform-origin: center center; /* 중심 기준으로 변형 */
 }
 
-/* .deadman {
+.day_mafia:hover {
+  transform: scale(1.2); /* 마우스 hover 상태에서 1.2배 확대 */
+}
+
+.day_mafia_gun {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 625px;
+  left: 1200;
   height: auto;
   width: auto;
-} */
+  rotate: 30deg;
+  z-index: 6;
+}
+
+.deadman_blood {
+  position: absolute;
+  top: 650px;
+  left: 900px;
+  height: auto;
+  width: auto;
+  z-index: 10;
+}
 
 .text {
   position: absolute;
-  top: -920px;
-  left: 120px;
+  top: -10px;
+  left: 75px;
   height: auto;
   width: auto;
-}
-
-.window {
-  position: absolute;
-  top: -500px;
-  left: 150;
-  height: auto;
-  width: auto;
+  z-index: 7;
 }
